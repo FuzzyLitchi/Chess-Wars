@@ -3,15 +3,20 @@ using System.Collections;
 
 public class ChessBoard : MonoBehaviour {
 
-	private bool[,] fields;
+	private GameObject[,] fields;
 
 	void Awake() {
 
-		fields = new bool[64, 64];
+		fields = new GameObject[64, 64];
 	}
 
-	public void setField(int x, int y) {
+	public void setField(GameObject fieldObject, int x, int y) {
 
-		fields 
+		fields[x, y] = fieldObject;
+	}
+
+	public GameObject getField (int x, int y) {
+	
+		return fields[x, y];
 	}
 }
