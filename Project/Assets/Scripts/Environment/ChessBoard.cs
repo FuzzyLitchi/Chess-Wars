@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class ChessBoard : MonoBehaviour {
-
+	
 	private GameObject[,] fields;
+
+	public static ChessBoard chessBoard;
 
 	void Awake() {
 
